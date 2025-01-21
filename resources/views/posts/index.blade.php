@@ -1,3 +1,6 @@
+@extends('auth.frontend')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +50,7 @@
                                       Data Post belum Tersedia.
                                   </div>
                               @endforelse
-                            </tbody>
+                            </tbody> 
                           </table>  
                           {{ $posts->links() }}
                     </div>
@@ -60,7 +63,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-    <script>
+    {{-- <script>
 
         @if(session()->has('success'))
         
@@ -71,7 +74,9 @@
             toastr.error('{{ session('error') }}', 'GAGAL!'); 
             
         @endif
-    </script>
+    </script> --}}
 
 </body>
 </html>
+
+@endsection
